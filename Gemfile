@@ -56,3 +56,7 @@ gem 'line-bot-api'
 
 #access tokenなどを管理する用
 gem 'dotenv-rails' 
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
