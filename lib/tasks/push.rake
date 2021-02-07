@@ -10,7 +10,8 @@ namespace :push_line do
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
     User.all.each do |user|
-            client.push_message(user.uid, message)
+      response = client.push_message(ENV["LINE_USER_ID"], message)
+      p response
     end
   end
 end
