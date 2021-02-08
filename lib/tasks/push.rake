@@ -3,8 +3,7 @@ namespace :push_line do
   task push_line_message_morning: :environment do # 以下にpush機能のタスクを書く。
     message = {
       type: 'text',
-      text: '小さいことを重ねることが、とんでもないところに行くただひとつの道 byイチロー'
-    }
+      text: every_day.text    }
     client = Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
